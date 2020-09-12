@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>
+  <span th:text="${hello}">Hello World!</span>
+</p>
+  <table>
+    <tr th:each="data : ${weatherDataList}" th:object="${data}">
+      <td th:text="*{id}"></td>
+      <td th:text="*{locationid}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{temperature}"></td>
+      <td th:text="*{humidity}"></td>
+      <td th:text="*{date_time}"></td>
+    </tr>
+  </table>
+
+  <p>東京データ</p>
+  <table>
+    <tr th:each="data : ${weatherDataTokyo}" th:object="${data}">
+      <td th:text="*{id}"></td>
+      <td th:text="*{locationid}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{temperature}"></td>
+      <td th:text="*{humidity}"></td>
+      <td th:text="*{date_time}"></td>
+    </tr>
+  </table>
+
+   <p>那霸データ</p>
+  <table>
+    <tr th:each="data : ${weatherDataNaha}" th:object="${data}">
+      <td th:text="*{id}"></td>
+      <td th:text="*{locationid}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{temperature}"></td>
+      <td th:text="*{humidity}"></td>
+      <td th:text="*{date_time}"></td>
+    </tr>
+  </table>
+  <p>ID1データ</p>
+  <table>
+    <tr th:each="data : ${weatherDataId}" th:object="${data}">
+      <td th:text="*{id}"></td>
+      <td th:text="*{locationid}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{temperature}"></td>
+      <td th:text="*{humidity}"></td>
+      <td th:text="*{date_time}"></td>
+    </tr>
+  </table>
+
+</body>
+</html>
